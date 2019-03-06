@@ -1,3 +1,7 @@
 def my_select(collection)
- # your code here!
+ if block_given?
+   collection.select {|num| num.even?}
+ else
+   puts "No block was given"
+ end
 end
